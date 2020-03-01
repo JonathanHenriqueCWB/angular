@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "primeiroProjeto": {
+    "primeiro-projeto": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/primeiroProjeto",
+            "outputPath": "dist/primeiro-projeto",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "primeiroProjeto:build"
+            "browserTarget": "primeiro-projeto:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "primeiroProjeto:build:production"
+              "browserTarget": "primeiro-projeto:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "primeiroProjeto:build"
+            "browserTarget": "primeiro-projeto:build"
           }
         },
         "test": {
@@ -110,19 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "primeiroProjeto:serve"
+            "devServerTarget": "primeiro-projeto:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "primeiroProjeto:serve:production"
+              "devServerTarget": "primeiro-projeto:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "primeiroProjeto",
+  "defaultProject": "primeiro-projeto",
   "cli": {
-    "analytics": "e64831f2-3cf1-4ad7-95fd-b275079d6523"
+    "analytics": "74254903-6930-4856-9db6-f1b3299cdc04"
   }
 }
