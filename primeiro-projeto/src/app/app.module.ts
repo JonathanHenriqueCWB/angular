@@ -8,17 +8,14 @@ import { AppComponent } from './app.component';
 import { PrimeiroComponenteComponent } from './primeiro-componente/primeiro-componente.component';
 import { SegundoComponenteComponent } from './segundo-componente/segundo-componente.component';
 import { CursosModule } from './cursos/cursos.module';
-import { CursosDetalheComponent } from './cursos-detalhe/cursos-detalhe.component';
 
 @NgModule({
-  declarations: [
+  declarations: [ // IMPORTE DE COMPONENTES, DIRETIVAS E PIPES
     AppComponent,
-    // Add modulo
     PrimeiroComponenteComponent,
     SegundoComponenteComponent,
-    CursosDetalheComponent
   ],
-  imports: [
+  imports: [ // IMPORT DE MODULOS EXTERNOS IRAO AQUI
     BrowserModule,
     AppRoutingModule,
     CursosModule

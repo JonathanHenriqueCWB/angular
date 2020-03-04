@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CursosComponent } from './cursos.component';
-
-
+import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 
 @NgModule({
-  declarations: [
-    CursosComponent
+  declarations: [ // IMPORTS DOS COMPONETES
+    CursosComponent,
+    CursoDetalheComponent
   ],
   imports: [
     CommonModule
   ],
-  exports: [
+  exports: [ // PARA PODER EXPOR ESSA CLASSE PARA OUTRO COMPONENTE
     CursosComponent
   ]
 })
