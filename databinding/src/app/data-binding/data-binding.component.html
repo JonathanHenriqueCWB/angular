@@ -1,0 +1,22 @@
+<section>
+
+  <!--Interpolação e concatenação de conteudo, a renderização
+  de variaveis ou metodos do componente no template atravez de {{}}-->
+  <article>
+    <h3>Imterpolação/Interpolation</h3>
+    <p>String renderizada com interpolação: {{ url }}</p>
+    <p>Resutado de 1 + 1: {{ 1+1 }}</p>
+    <p>Resultado de 2 + 2: {{ 2 + getValor() }} </p>
+    <p>Curso de angular: {{ cursoAngular && getLikeCourse()}}</p>
+  </article>
+
+  <!--Property binding, caso tenha uma propriedade essa tag não
+  precisa usar a interpolação e so adicionar [] nas propriendade e chamar
+  o metodo ou variavel sem {{}}-->
+  <article>
+    <h3>Property Binding</h3>
+    <img src="{{ urlImagem }}" style="width: 200px; height: 200px;"> <!--Interpolation-->
+    <img [src]=" urlImagem " style="width: 200px; height: 200px;"> <!--Property Binding-->
+  </article>
+
+</section>
