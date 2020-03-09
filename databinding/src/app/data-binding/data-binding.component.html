@@ -1,22 +1,53 @@
-<section>
+<!--Interpolação e concatenação de conteudo, a renderização
+de variaveis ou metodos do componente no template atravez de {{}}-->
+<article>
+  <h3>Imterpolação/Interpolation</h3>
+  <p>String renderizada com interpolação: {{ url }}</p>
+  <p>Resutado de 1 + 1: {{ 1+1 }}</p>
+  <p>Resultado de 2 + 2: {{ 2 + getValor() }} </p>
+  <p>Curso de angular: {{ cursoAngular && getLikeCourse()}}</p>
+</article>
 
-  <!--Interpolação e concatenação de conteudo, a renderização
-  de variaveis ou metodos do componente no template atravez de {{}}-->
-  <article>
-    <h3>Imterpolação/Interpolation</h3>
-    <p>String renderizada com interpolação: {{ url }}</p>
-    <p>Resutado de 1 + 1: {{ 1+1 }}</p>
-    <p>Resultado de 2 + 2: {{ 2 + getValor() }} </p>
-    <p>Curso de angular: {{ cursoAngular && getLikeCourse()}}</p>
-  </article>
+<!--Property binding, caso tenha uma propriedade essa tag não
+precisa usar a interpolação e so adicionar [] nas propriendade e chamar
+o metodo ou variavel sem {{}}-->
+<article>
+  <h3>Property Binding</h3>
+  <img src="{{ urlImagem }}" style="width: 200px; height: 200px;"> <!--Interpolation-->
+  <img [src]=" urlImagem " style="width: 200px; height: 200px;"> <!--Property Binding-->
+</article>
 
-  <!--Property binding, caso tenha uma propriedade essa tag não
-  precisa usar a interpolação e so adicionar [] nas propriendade e chamar
-  o metodo ou variavel sem {{}}-->
-  <article>
-    <h3>Property Binding</h3>
-    <img src="{{ urlImagem }}" style="width: 200px; height: 200px;"> <!--Interpolation-->
-    <img [src]=" urlImagem " style="width: 200px; height: 200px;"> <!--Property Binding-->
-  </article>
+<article>
+  <!--Adicionando classe do booststrap pelo combobox
+  sintaxe: [class.nomeDaClasse]="nomeVariavel.value == 'valueDaTag'"-->
+  <div>
+    <h6>Class Binding</h6>
+    Selecione uma classe:
+    <select #mudar (change)="0">
+      <option value="alert-success">Sucesso</option>
+      <option value="alert-info">Info</option>
+      <option value="alert-warning">Alerta</option>
+      <option value="alert-danger">Erro</option>
+    </select>
+    <br><br>
 
-</section>
+    <!--Leitura da estrutura: Aplicar classe alert-success caso o valor selecionado seja sucesso -->
+    <div class="alert" role="alert" [class.alert-success]="mudar.value == 'alert-success'"></div>
+    <div class="alert" role="alert" [class.alert-info]="mudar.value == 'alert-info'"></div>
+    <div class="alert" role="alert" [class.alert-warning]="mudar.value == 'alert-warning'"></div>
+    <div class="alert" role="alert" [class.alert-danger]="mudar.value == 'alert-danger'"></div>
+
+    <div class="alert {{ mudar.value }}">Texto colorido conforme valor do combobox</div>
+
+  </div>
+</article>
+
+<article>
+  <!--Muda propriedade do style para block ou none comforme o select acima-->
+  <div>
+    <h6>Style Binding</h6>
+    Aparecerá um texto abaixo no select error acima
+    <div class="alert alert-danger" [style.display]="mudar.value == 'alert-danger' ? 'block':'none'">
+      Esse texto so aparece em caso de erro</div>
+  </div>
+</article>
