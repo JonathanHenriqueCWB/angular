@@ -51,3 +51,33 @@ o metodo ou variavel sem {{}}-->
       Esse texto so aparece em caso de erro</div>
   </div>
 </article>
+
+<br><br>
+
+<article>
+  <div>
+    <h6>Event Binding</h6>
+    <button class="btn btn-primary" (click)="botaoClicado()">Me clique!</button>
+
+    <br><br>
+
+    <!--Passa o EVENTO para função chamada-->
+    <input type="text"
+      (keyup)="onKeyUp($event)"
+      (keyup.enter)="salvarValor(campoInput.value)"
+      (blur)="salvarValor(campoInput.value)"
+      #campoInput>
+
+    <p>Valor atual: {{ valorAtual }}</p>
+    <p>Valor salvo: {{ valorSalvo }}</p>
+
+    <br><br>
+
+    <span
+      (mouseover)="onMouseOverOut()"
+      (mouseout)="onMouseOverOut()"
+      [class.highlight]="isMouseOver" >
+    Passe mouse sobrem min</span>
+
+  </div>
+</article>
