@@ -81,3 +81,35 @@ o metodo ou variavel sem {{}}-->
 
   </div>
 </article>
+
+<article class="two-way-binding">
+  <div>
+    <h3>Two wayt data binding</h3>
+
+    <!-- Caso ocora um erro com two way data binding verificar
+    no modulo o import import {FormsModule} from '@angular/forms'
+    e add no import o  -->
+
+    <div>
+
+      <input type="text"
+        [value]="nome"
+        (input)="nome =$event.target.value"
+      >
+
+      <input type="text"
+        [ngModel]="nome"
+        (ngModelChange)="nome =$event.target.value"
+      >
+
+      <input type="text" [(ngModel)]="nome">
+      <p>Value: {{ nome }}</p>
+
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="pessoa.nome">
+      <input type="text" [(ngModel)]="pessoa.idade">
+      Nome: {{ pessoa.nome }} Idade: {{ pessoa.idade }}
+    </div>
+  </div>
+</article>

@@ -13,6 +13,12 @@ export class DataBindingComponent implements OnInit {
   valorAtual = '';
   valorSalvo;
   isMouseOver = false;
+  public nome = 'abc';
+
+  pessoa = {
+    nome: 'asdf',
+    idade: 20
+  };
 
   getValor() {
     return 2;
