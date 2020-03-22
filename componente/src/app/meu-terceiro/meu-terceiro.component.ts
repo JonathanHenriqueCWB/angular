@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-meu-terceiro',
+  templateUrl: './meu-terceiro.component.html',
+  styleUrls: ['./meu-terceiro.component.css']
+})
+export class MeuTerceiroComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
