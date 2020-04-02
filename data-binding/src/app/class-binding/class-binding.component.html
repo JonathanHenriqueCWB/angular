@@ -1,1 +1,27 @@
-<p>class-binding works!</p>
+<h2>Class Binding</h2>
+<ul>
+  <li>Adicionando uma classe a partir do binding</li>
+  <li>Classes de quaisquer tipo, bootstrap, css...</li>
+</ul>
+<div>
+  <select #variaveControle (change)="0">
+    <option></option>
+    <option value="valor1">Sucesso</option>
+    <option value="valor2">Informação</option>
+    <option value="valor3">Alerta</option>
+    <option value="valor4">Erro</option>
+  </select>
+
+  <div class="alert" role="alert" [class.alert-success]="variaveControle.value == 'valor1'">
+    Classe bootstrap alert-success
+  </div>
+  <div class="alert" role="alert" [class.alert-info]="variaveControle.value == 'valor2'">
+    Classe bootstrap alert-info
+  </div>
+  <div class="alert" role="alert" [class.alert-warning]="variaveControle.value == 'valor3'">
+    Classe bootstrap alert-warning
+  </div>
+  <div class="alert" role="alert" [class.red]="variaveControle.value == 'valor4'">
+    Classe simples criada
+  </div>
+</div>

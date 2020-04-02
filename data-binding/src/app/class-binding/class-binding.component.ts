@@ -13,3 +13,8 @@ export class ClassBindingComponent implements OnInit {
   }
 
 }
+/*
+  Class binding adiciona remove ou altera uma classe de
+  uma tag.
+  Estrutura: [class.NomePropriedade]="varivaelControle == 'valueDaTagAserAplicada' "
+*/
