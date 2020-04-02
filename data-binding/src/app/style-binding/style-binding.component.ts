@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StyleBindingComponent implements OnInit {
 
-  constructor() { }
+  public mostrar = false;
+
+  constructor() {
+  }
+
+  mudar() {
+    if (this.mostrar) {
+      this.mostrar = false;
+    } else {
+      this.mostrar = true;
+    }
+  }
 
   ngOnInit(): void {
   }

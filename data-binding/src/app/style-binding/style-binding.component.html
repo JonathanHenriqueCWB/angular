@@ -1,1 +1,11 @@
-<p>style-binding works!</p>
+<h2>Style Binding</h2>
+
+<div class="row">
+  <div class="col-md-2">
+    <button (click)="mudar()">Click me!</button>
+  </div>
+  <div class="col-md-10">
+    <div class = "estilo" [style.display]="mostrar == true ? 'block' : 'none'"></div>
+  </div>
+</div>
+
