@@ -1,0 +1,31 @@
+<h2>Two-way data binding</h2>
+
+<div class="row">
+  <!--EXEMPLO SEM TWO WAY DATA BINDING
+  Utilizando uma propert binding par atulaizar o template
+  E um event binding para atulizar o componente -->
+  <div class="col-sm-6">
+    <input type="text" [value]="input1" (input)="input1 = $event.target.value">
+     <!--OUTRO EXEMPLO-->
+    <input type="text" [ngModel]="input1" (ngModelChange)="input1= $event">
+    <p>Voce digitou: {{ input1 }}</p>
+
+  </div>
+
+  <!--EXEMPLO COM TWO-WAY DATA BINDING
+  Utilizando banana in a box-->
+  <div class="col-sm-6">
+    <input type="text" [(ngModel)]="input2">
+    <p>Voce digitou: {{ input2 }}</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+
+    <input type="text" [(ngModel)]="pessoa.nome">
+    <input type="text" [(ngModel)]="pessoa.idade">
+    <p>Meu nome é: {{ pessoa.nome }} e tenho {{pessoa.idade}} anos</p>
+
+  </div>
+</div>
