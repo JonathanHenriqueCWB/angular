@@ -1,0 +1,9 @@
+<!--
+<router-outlet></router-outlet>
+-->
+
+<h1>Componente Principal</h1>
+<hr>
+<app-ciclo [valorInicial]="valor" *ngIf="!deletarCiclo" ></app-ciclo>
+<button (click)="mudarValor()">Mudar valor</button>
+<button (click)="destruirCiclo()">Destruir ciclo</button>
