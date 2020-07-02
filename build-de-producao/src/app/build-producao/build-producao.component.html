@@ -1,0 +1,32 @@
+<h2>Gerando buil de produção</h2>
+
+<h3>Build de DEV</h3>
+<p>O build será gerado dentro de um diretório chamado dist com 3 arquvos:</p>
+<ul>
+    <li><strong>Index.html - </strong>Ele adiciona o import inline do do main.bundle.js
+    e do polyfills.bundle.js</li>
+    <li><strong>Main.bundle.js - </strong>Contem todo código fonte da aplicação, incluindo
+    os template html e css</li>
+    <li><strong>Polyfills.bundle.js - </strong>Contem o código auxiliar que ajudará o browser
+    a renderizar o código</li>
+</ul>
+<p>Para gerar o build de dev temos os seguintes comando:</p>
+<ol>
+    <li>ng build --target=development --environment=dev</li>
+    <li>ng build --dev --e=dev</li>
+    <li>ng build --dev</li>
+    <li>ng build</li>
+</ol>
+
+<h3>Build de produção (build final)</h3>
+<p> Usado para gerar o build final compactado e em um único arquivo,
+ gera os mesmos arquivos que o build de dev só que com o arquivo main
+ e polyfills minificados , as variaveis são renomeadas em uma única
+ letra para poder ficar mais leve o software e diminuir o tamanho
+ do arquivo, os arquivos css também serão minificados no bundle.</p>
+ <p>Para gerar o build de produção:</p>
+ <ol>
+     <li>ng build --target=production --environment=prod</li>
+     <li>ng build --prod --env=prod </li>
+     <li>ng build --prod</li>
+ </ol>
