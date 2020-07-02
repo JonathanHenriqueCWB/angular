@@ -1,0 +1,60 @@
+<h4 class="text-center">Angular CLI - Instalando bootstrap</h4>
+
+<div class="container">
+    <h5>Instalando bootstrap no projeto angular</h5>
+    <p>
+        Para instalar o bootstrap basta digitar os comando no terminal,
+        caso prefira instalar alguma versão especifica da biblioteca basta adicionar
+        a versão da lib:
+        <br/><strong>npm install bootstrap --save</strong>
+        <br><strong>npm install bootstrap@4.5.0 --save</strong>
+    </p>
+
+    <h5>Utilizando bootstrap com jQyery e popper.js</h5>
+    <p>
+        Para instalar a versão correta compatível com bootstrap verificar no site do
+        bootstrap antes de instalá-la, para instalar o jQuery basta utilizar os comando
+        a baixo:
+        <br><strong>npm install jquery --save</strong>
+        <br><strong>npm install jquery@3.5.1 --save</strong>
+    </p>
+    <p>
+        Você também precisará utilizar o popper.js para funcionar corretamente, 
+        ou seja o bootstrapo e dependente do jquery e js (popper) para funcionar 
+        corretamente. Assim como jQuery e preciso verificar a compatibilidade de 
+        versões no site do javascript antes de instalá-lo, para instalar digite 
+        um dos comandos:
+        <br><strong>npm install popper.js --save</strong>
+        <br><strong>npm install popper.js@1.16.0 --save</strong>
+    </p>
+
+    <h5>Utilizando bootstrap com a biblioteca ngx-bootstrap</h5>
+    <p>
+        Para trabalhar com angular e bootstrap não é mais necessário utilizar o jquery
+        para isso podemos utilizar a biblioteca ngx-bootstrap (verificar versão de
+        compatibilidade da lib). Todos os componentes do bootstrap foram recriados nessa
+        biblioteca, então basta fazer o importe no component.ts e utilizar a tag recriada
+        no template:
+        <br><strong>npm install ngx-bootstrap --save</strong>
+    </p>
+
+    <h5>Referenciando as bibliotecas</h5>
+    <p>
+        Agora bastar referenciar as bibliotecas no angular.json. Obs: os arquivos tem 
+        quer ser colocados exatamente nessa sequencia.
+    </p>
+    <p>
+        Para poder utilizar o css do bootstrap deverá ser referenciado no no style que fica dentro do arquivo angular.json:
+        <br><strong>“node_modules/bootstrap/dist/css/bootstrap.css”</strong>
+    </p>
+    <p>
+        Em scripts coloque:
+        <br><strong>“node_modules/jquery/dist/jquery.js”,</strong>
+        <br><strong>“node_modules/popper.js/dist/umd/popper.js”,</strong>
+        <br><strong>“node_modules/bootstrap/dist/js/bootstrap.js”</strong>        
+    </p>
+    <p>
+        Salve o arquivo e reinicie o servidor Angular, para verificar as versões 
+        das bibliotecas instaladas basta abrir o arquivo package.json
+    </p>
+</div>
